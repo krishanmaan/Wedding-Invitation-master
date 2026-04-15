@@ -351,7 +351,7 @@
 /*******************************/
 
 body {
-	font-family: Arial, Helvetica, Sans-serif;
+	font-family: 'Kalam', 'Amita', cursive, Arial, Helvetica, Sans-serif;
 }
 
 img {
@@ -380,30 +380,30 @@ img {
 }
 
 .title h1 {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Kalam', 'Dancing Script', cursive;
 	font-weight: bold;
 	font-style: normal;
-	font-size: 60px;
+	font-size: 70px; /* Increased for Kalam */
 	margin: 32px 0;
 	color: #674ea7;
 }
 
 .title h2 {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Kalam', 'Dancing Script', cursive;
 	font-weight: bold;
 	font-style: normal;
 	margin: 0;
 	padding: 0;
-	font-size: 24px;
+	font-size: 32px;
 	color: #e25c67;
 	line-height: 1;
 }
 
 .dance-med {
-	font-family: 'Dancing Script', cursive;
+	font-family: 'Kalam', 'Dancing Script', cursive;
 	font-weight: bolder;
 	font-style: normal;
-	font-size: 32px;
+	font-size: 36px;
 	color: #674ea7;
 	margin: 16px;
 	text-align: center;
@@ -446,7 +446,7 @@ img {
 * {
 	/* margin: 0;
     padding: 0; */
-	font-family: 'Arvo', serif;
+	font-family: 'Kalam', 'Amita', 'Tiro Devanagari Hindi', serif;
 }
 
 body {
@@ -566,9 +566,9 @@ body {
 }
 
 .events h2 {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Kalam', 'Dancing Script', cursive;
     color: #674ea7;
-    font-size: 36px;
+    font-size: 42px;
     margin-bottom: 20px;
     border-bottom: 2px solid #e25c67;
     display: inline-block;
@@ -606,6 +606,24 @@ body {
 }
 
 @media (max-width: 600px) {
+    .title h1 {
+        font-size: 42px;
+        margin: 20px 0;
+    }
+    .title h2 {
+        font-size: 24px;
+    }
+    .title h3 {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+    .title p {
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    .dance-med {
+        font-size: 24px;
+    }
     .event-item {
         flex-direction: column;
         align-items: center;
@@ -615,6 +633,46 @@ body {
     .event-name, .event-date, .event-time {
         text-align: center;
         margin: 2px 0;
+        width: 100%;
+    }
+    .block {
+        min-width: 70px;
+        height: 70px;
+        font-size: 24px;
+        padding: 10px;
+    }
+    .block span {
+        font-size: 10px;
+        letter-spacing: 1px;
+    }
+    #time {
+        padding: 20px 10px;
+        border-radius: 30px;
+        margin: 20px auto;
+    }
+    .container {
+        gap: 10px;
+    }
+    .top-right-decoration, .top-left-decoration {
+        max-width: 100px;
+    }
+    .actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .venue {
+        margin-right: 0;
+        width: 250px;
+        font-size: 14px;
+        padding: 12px;
+    }
+    .footer {
+        font-size: 14px;
+        margin: 20px 10px;
+    }
+    .happiness {
+        font-size: 20px;
     }
 }
 
