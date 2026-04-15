@@ -127,7 +127,7 @@ var translations = {
         bless: "विवाहित जोड़े को सुखी जीवन का आशीर्वाद दें!"
     },
     en: {
-        btn: "हिंदी",
+        btn: "Sanskrit",
         groom: "Pramod (Roshan)",
         bride: "Teena (Naina)",
         and: "&",
@@ -156,6 +156,37 @@ var translations = {
         f_fam: "Papatwan Family",
         h_msg: "Join us in our happiness!",
         bless: "Bless the married couple for happy life!"
+    },
+    sa: {
+        btn: "हिन्दी",
+        groom: "प्रमोदः (रोशनः)",
+        bride: "टीना (नैना)",
+        and: "च",
+        status: "परिणयसूत्रंबद्धौ भविष्यतः",
+        on: "दिनाङ्के",
+        at: "स्थानम् :",
+        date: "२५ एप्रिल २०२६",
+        place: "झालद की ढाणी",
+        city: "अचरोल, जयपुरम",
+        days: "दिनानि",
+        hours: "होराः",
+        minutes: "निमेषाः",
+        seconds: "क्षणाः",
+        events_title: "मङ्गल-कार्यक्रमाः",
+        e1_n: "पीततण्डुलाः", e1_d: "बुधवार, १५ एप्रिल २०२६", e1_t: "प्रातः ०९:१५ वादने",
+        e2_n: "लग्नम्", e2_d: "मंगलवार, २१ एप्रिल २०२६", e2_t: "सायं ०४:१५ वादने",
+        e3_n: "बाण-विधिः", e3_d: "गुरुवार, २३ एप्रिल २०२६", e3_t: "प्रातः ०९:१५ वादने",
+        e4_n: "चाक-पूजनम्", e4_d: "शुक्रवार, २४ एप्रिल २०२६", e4_t: "प्रातः ११:०० वादने",
+        e5_n: "वरयात्रा", e5_d: "शनिवार, २५ एप्रिल २०२६", e5_t: "सायं ०४:१५ वादने",
+        e6_n: "प्रीतिभोजः", e6_d: "बुधवार, २९ एप्रिल २०२६", e6_t: "सायं ०४:१५ वादने",
+        note: "<strong>सूचना:</strong> वरयात्रा शनिवारवासरे, २५ एप्रिल दिनाङ्के सायंकाले ०४:१५ वादने पांच्या की ढाणी, चोमू तः झालद की ढाणी, अचरोल, जयपुरं प्रति प्रस्थानं करिष्यति।",
+        reception: "प्रीतिभोजः एवं आशीर्वाद-समारोहः",
+        btn_v: "स्थानं पश्यतु",
+        btn_d: "निमन्त्रण-पत्रं प्राप्नुवन्तु",
+        f_msg: "वयं भवता सह अस्माकं परिवारस्य अस्य मङ्गल-अवसरस्य आनन्दं अनुभवितुं उत्सुकाः स्मः!",
+        f_fam: "पापटवान-परिवारः",
+        h_msg: "अस्माकं हर्षे सम्मिलन्त्व!",
+        bless: "मङ्गलं भवतु!"
     }
 };
 
@@ -212,9 +243,14 @@ function updateLanguage(lang) {
 }
 
 function toggleLanguage() {
-    currentLang = (currentLang === 'hi') ? 'en' : 'hi';
+    if (currentLang === 'hi') {
+        currentLang = 'en';
+    } else if (currentLang === 'en') {
+        currentLang = 'sa';
+    } else {
+        currentLang = 'hi';
+    }
     updateLanguage(currentLang);
-    // Refresh AOS/GSAP if needed, but since it's just text change, usually not required.
 }
 
 $(document).on('click', function(){
